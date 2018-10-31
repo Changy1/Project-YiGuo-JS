@@ -1,0 +1,910 @@
+@import '../../functions/functions';
+@import '../../mixins/mixins';
+$allWidth : 1200px;
+$smallFont : 12px;
+$white: white;
+$greenColor: rgb(0,136,66);
+$topColor : rgb(247,249,248);
+$fontColor: #727272;
+$colorE0 : #e0e0e0;
+$colorB4 : #b4c1a3;
+$color153: rgb(153,153,153);
+$imgheader : 'http://localhost:9000/css/img/header-img.png';
+$fontfamily: Arial,Verdana,"\5b8b\4f53";
+body{
+    font-family: $fontfamily;
+    color: #444;
+    word-break: break-all;
+    word-wrap: break-word;
+    font-size: $smallFont;
+    background: rgb(247,248,248);
+}
+a,i{
+    display: inline-block;
+    cursor: pointer;
+}
+a{
+    &:hover{
+        color: $greenColor;
+    }
+}
+/* 顶部工具栏 */
+.topmost{
+    @include clearfix;
+    line-height: 30px;
+    height: 30px;
+    background: $topColor;
+    s{
+        @include transform(0deg);
+        @include transition(transform .2s ease-in 0s);
+        position: absolute;
+        top: 13px;
+        right: 8px;
+        width: 8px;
+        height: 4px;
+        background: url($imgheader) no-repeat 0 0;
+    }
+    .container{
+        width: $allWidth;
+        @include clearfix;
+        @include marginCenter;
+        .topmost-left{
+            float: left;
+            li{
+                margin-right: 10px;
+                float: left;
+            }
+            .li{
+                position: relative;
+                .city{
+                    float: left;
+                    color: $greenColor;
+                    cursor: pointer;
+                }
+                .city-go{
+                    float: left;
+                    .city-name{
+                        color: $greenColor;
+                        display: block;
+                        position: relative;
+                        padding: 0 20px 5px 5px;
+                        margin-top: 5px;
+                        height: 20px;
+                        line-height: 20px;
+                        s{
+                            top: 8px;
+                        }
+                    }
+                    .hover{
+                        background: $greenColor;
+                        color: $white;
+                    }
+                    .sh{
+                        background: url('http://localhost:9000/css/img/header-img.png') no-repeat -25px 0;
+                        @include transform(180deg);
+                    }
+                }
+                .city-con{
+                    z-index: 700;
+                    position: absolute;
+                    top: 28px;
+                    left: 0;
+                    width: 482px;
+                    border: 2px solid $greenColor;
+                    background: $white;
+                    .headline{
+                        padding: 0 15px;
+                        line-height: 30px;
+                        background: rgb(237,237,237);
+                        a{
+                            font-family: simsun;
+                            float: right;
+                            color: $greenColor;
+                        }
+                    }
+                    .city-hot{
+                        line-height: 18px;
+                        margin: 10px 15px;
+                        span{
+                            display: block;
+                            margin-bottom: 5px;
+                            font-weight: bold;
+                            color: #666;
+                            i{
+                                display: inline-block;
+                                vertical-align: middle;
+                                width: 16px;
+                                height: 16px;
+                                margin-right: 5px;
+                                background: url($imgheader) no-repeat;
+                                background-position: -174px 0;
+                            }
+                        }
+                        a{
+                            margin: 0 5px;
+                            padding: 3px 10px 3px 15px;
+                            white-space: nowrap;
+                        }
+                    }
+                    .city-tab{
+                        color: $greenColor;
+                        margin: 10px 0;
+                        padding: 0 15px;
+                        span{
+                            display: inline-block;
+                            width: 19%;
+                            border: 1px solid $white;
+                            border-bottom-color: $colorE0;
+                            text-align: center;
+                            cursor: pointer;
+                        }
+                        .active{
+                            border-color: $colorE0;
+                            border-bottom-color: $white;
+                        }
+                    }
+                    .citylist{
+                        display: none;
+                        margin: 0 15px 15px;
+                        dl{
+                            display: block;
+                            overflow: hidden;
+                            line-height: 22px;
+                            dt{
+                                font: bold 12px/22px Arial,"Microsoft YaHei" ;
+                                color: $greenColor;
+                                float: left;
+                                margin-right: 10px;
+                                text-align: center;
+                            }
+                            dd{
+                                overflow: hidden;
+                                a{
+                                    &:hover{
+                                        color: $greenColor;
+                                    }
+                                    width: 18%;
+                                    margin: 0 0 0 5px;
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                    .activetwo{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .topmost-right{
+            float: right;
+            color: #444;
+            a:hover{
+                color: $greenColor;
+            } 
+            li{
+                position: relative;
+                float: right;
+                padding: 0 10px;
+                text-align: center;
+            }
+            i{
+                vertical-align: middle;
+                width: 18px;
+                height: 18px;
+                margin-right: 5px;
+                background: url($imgheader) no-repeat;
+            }
+            .TEL i{
+                background-position: -86px 0;
+            }
+            .pay i{
+                width: 22px;
+                background-position: -147px 0;
+            }
+            .mobile{
+                padding: 0px;
+                i{
+                    background-position: -64px 0;
+                }
+                a{
+                    border: solid $topColor;
+                    border-width: 0 1px; 
+                    padding: 0 20px 0 10px;
+                    position: relative;
+                    z-index: 601;
+                }
+                .hover{
+                    border-color: $colorB4;
+                    background: $white;
+                }
+                .sh{
+                    @include transform(180deg);
+                }
+                .bottom{
+                    z-index: 600;
+                    width: 125px;
+                    padding: 10px;
+                    line-height: 25px;
+                }
+            }
+            .myyiguo{
+                padding: 0px;
+                i{
+                    background-position: -40px 0;
+                }
+                .myyiguo-top{
+                    a{
+                        border: solid $topColor;
+                        border-width: 0 1px;
+                        padding: 0 20px 0 10px;
+                        position: relative;
+                        z-index: 601;
+                    }
+                    .hover{
+                        border-color: $colorB4;
+                        background: $white;
+                    }
+                    .sh{
+                        @include transform(180deg);
+                    }
+                }
+                .bottom{
+                    z-index: 600;
+                    width: 100px;
+                    padding: 5px 12px;
+                    text-align: left;
+                    a{
+                        &:hover{
+                            color: $greenColor;
+                        }
+                        padding: 0;
+                        display: block;
+                        line-height: 25px;
+                        color: $fontColor;
+                        b{
+                            margin-left: 10px;
+                            padding: 0 5px;
+                            background: $greenColor;
+                            border-radius: 16px;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            .bottom{
+                position: absolute;
+                top: 29px;
+                left: 0;
+                border: 1px solid $colorB4;
+                background: $white;
+            }
+        }
+    }
+}
+/* 头部 */
+.header{
+    background: $colorE0;
+    .header-container{
+        width: $allWidth;
+        @include marginCenter;
+        height: 58px;
+        padding: 15px 0 5px 0;
+        /* 易果logo */
+        .log{
+            float: left;
+            width: 280px;
+            margin-right: 10px;
+            a{
+                display: block;
+                width: 145px;
+                height: 50px;
+                background: url('http://localhost:9000/css/img/logo.png') no-repeat;
+            }
+        }
+        /* 输入框部分 */
+        .search{
+            float: left;
+            width: 528px;
+            position: relative;
+            .search-top{
+                @include clearfix;
+                .search-input{
+                    float: left;
+                    width: 425px;
+                    height: 26px;
+                    padding: 0 10px;
+                    border: 1px solid $greenColor;
+                    background: $colorE0;
+                    vertical-align: middle;
+                    font-family: $fontfamily;
+                    font-size: $smallFont;
+                    color: $color153;
+                }
+                .search-btn{
+                    float: left;
+                    display: block;
+                    width: 81px;
+                    line-height: 28px;
+                    height: 28px;
+                    font-size: 14px;
+                    color: $white;
+                    cursor: pointer;
+                    background: $greenColor;
+                    font-family: $fontfamily;
+                }
+            }
+            .hide{
+                display: none;
+                width: 455px;
+                overflow: hidden;
+                position: absolute;
+                left: 0;
+                top: 27px;
+                width: 445px;
+                border: 1px solid #CCC;
+                background: #fff;
+                z-index: 99999;
+                li{
+                    overflow: hidden;
+                    padding: 3px 5px;
+                    line-height: 22px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    &:hover{
+                        background: rgb(255,199,135);
+                    }
+                }
+                .closethis{
+                    border-top: 1px solid #efefef;
+                    text-align: right;
+                    font-weight: normal;
+                }
+            }
+            .search-bottom{
+                line-height: 30px;
+                .hot{
+                    color: $greenColor;
+                }
+                a{
+                    margin-right: 5px;
+                    color: $fontColor;
+                }
+            }
+        }
+        /* 购物车部分 */
+        .shopping-cart{
+            float: right;
+            position: relative;
+            dt{
+                width: 170px;
+                height: 28px;
+                padding: 6px 0;
+                line-height: 28px;
+                text-align: center;
+                font-size: 25px;
+                border: 1px solid $greenColor;
+                background: $white;
+                cursor: pointer;
+                a{
+                    display: block;
+                    color: $greenColor;
+                    span{
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 28px;
+                        height: 20px;
+                        margin-right: 10px;
+                        font-size: 12px;
+                        padding: 0;
+                        background: url($imgheader) no-repeat -112px 0;
+                        b{
+                            display: block;
+                            width: 24px;
+                            line-height: 12px;
+                            text-align: center;
+                            font-weight: bold;
+                        }    
+                    }
+                }
+            }
+        }
+    }
+}
+/* 左边栏菜单 */
+.left-nav{
+    z-index: 200;
+    position: relative;    
+    @include clearfix;
+    .left-nav-container{
+        width: $allWidth;
+        @include marginCenter;
+        @include clearfix;
+        .left-all{
+            float: left;
+            width: 180px;
+            height: 38px;
+            position: relative;
+            text-align: center;
+            background: $greenColor;
+            a{
+                overflow: hidden;
+                font: bold 15px/16px "Microsoft YaHei";
+                color: $white;
+                display: block;
+                height: 16px;
+                padding: 11px 0;
+            }
+        }
+        .nav-items{
+            overflow: hidden;
+            float: left;
+            width: 1020px;
+            height: 37px;
+            line-height: 37px;
+            border-bottom: 1px solid #008842;
+            li{
+                float: left;
+                width: 115px;
+                text-align: center;
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+        .left-other{
+            position: absolute;
+            top: 38px;
+            height: 462px;
+            background: rgba(255, 255, 255, 0.9);
+            .item{
+                h3{
+                    font-size: 12px;
+                    a{
+                        overflow: hidden;
+                        position: relative;
+                        display: block;
+                        width: 165px;
+                        height: 24px;
+                        padding: 9px 0 9px 15px;
+                        font: normal 14px/24px "Microsoft YaHei";
+                        i{
+                            @include transition(all .3s ease-in);
+                            overflow: hidden;
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 15px;
+                            background: url('http://localhost:9000/css/img/floor_guide.png') no-repeat;
+                            vertical-align: middle;
+                        }
+                        s{
+                            position: absolute;
+                            top: 7px;
+                            right: 18px;
+                            font-family: Arial;
+                            text-decoration: none;
+                        }
+                    }
+                    .current{
+                        z-index: 78;
+                        padding: 8px 0 8px 15px;
+                        background: rgba(255, 255, 255, 0.95);
+                        background: #fff \9;
+                        border: 1px solid #bbb;
+                        border-right: 0px;
+                        i{
+                            margin-left: 7px;
+                        }
+                    }
+                }
+                .sub-item{
+                    display: none;
+                    z-index: 3;
+                    position: absolute;
+                    top: -38px;
+                    left: 180px;
+                    width: 215px;
+                    height: 464px;
+                    padding: 17px 20px;
+                    border: 1px solid #bbb;
+                    background: rgba(255, 255, 255, 0.9);
+                    h4{
+                        margin-bottom: 10px;
+                        font: normal 18px "Microsoft YaHei";
+                        text-decoration: underline;
+                        a{
+                            color: $greenColor;
+                        }
+                    }
+                    .sub-list{
+                        a{
+                            display: inline-block;
+                            line-height: 25px;
+                            margin-right: 30px;
+                            color: #686868;
+                            &:hover{
+                                color: $greenColor;
+                            }
+                        }
+                    }
+                    .sub-img{
+                        position: absolute;
+                        bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* 中间部分 */
+.wrap{
+    width: $allWidth;
+    @include marginCenter;
+    .crumbs{
+        margin: 10px 0;
+        margin-left: -10px;
+        a{
+            margin: 0 10px;
+        }
+    }
+    .wrap-left{
+        width: 196px;
+        float: left;
+        .le-con{
+            width: 163px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #eff1ed;
+            background: #fff;
+            dt{
+                height:30px;
+                line-height: 30px;
+                font-size: 14px;
+                color: #333;
+                font-weight: bold;
+            }
+            dd{
+                margin-bottom: 10px;
+                a{
+                    height: 30px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+    .wrap-right{
+        position: relative;
+        float: left;
+        margin-left: 20px;
+        width: 984px;
+        .user{
+            position: relative;
+            margin-bottom: 20px;
+            height: 122px;
+            padding-right: 4px;
+            overflow: hidden;
+            .user-left{
+                float: left;
+                position: relative;
+                width: 485px;
+                height: 90px;
+                padding: 15px 17px 15px 0;
+                border: 1px solid #e3e6e0;
+                border-right: 0px;
+                border-radius: 86px 0 0 86px;
+                background: #fff;
+                .user-bac{
+                    position: absolute;
+                    right: 0;
+                    top: -1px;
+                    width: 17px;
+                    height: 122px;
+                    background: url('http://localhost:9000/css/img/center.jpg')
+                }
+                .u-pic{
+                    float: left;
+                    position: relative;
+                    margin-left: 20px;
+                    height: 84px;
+                    width: 84px;
+                    border-radius: 50%;
+                    border: 3px solid #e3e6e0d5;
+                    overflow: hidden;
+                    background: url('http://localhost:9000/css/img/my.jpg') center;
+                }
+                .u-txt{
+                    float: left;
+                    width: 140px;
+                    position: relative;
+                    margin-left: 20px;
+                    .txt-top{
+                        line-height: 28px;
+                        margin-bottom: 5px;
+                        .txt-a1{
+                            width: 90px;
+                            font-size: 18px;
+                            font-family: "microsoft yahei";
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            vertical-align: middle;
+                        }
+                        .txt-a2{
+                            text-decoration: underline;
+                            vertical-align: middle;
+                            margin-left: 5px;
+                            font-size: 12px;
+                            color: #008842;
+                        }
+                    }
+                    .txt-bottom{
+                        margin-bottom: 10px;
+                        .vip{
+                            .grade{
+                                height: 16px;
+                                .i1{
+                                    display: inline-block;
+                                    width: 13px;
+                                    height: 16px;
+                                    margin-right: 5px;
+                                    vertical-align: middle;
+                                    background: url('http://localhost:9000/css/img/yyh-icon.jpg')
+                                }
+                            }
+                            .grade-line{
+                                width: 115px;
+                                height: 4px;
+                                margin-top: 8px;
+                                span{
+                                    position: relative;
+                                    height: 4px;
+                                    background: #dfeed3;
+                                    display: block;
+                                    width: 100%;
+                                    .i2{
+                                        background: #008842;
+                                        display: block;
+                                        position: absolute;
+                                        left: 0;
+                                        top: 0;
+                                        height: 4px;
+                                        overflow: hidden;
+                                        width: 35%;
+                                    }
+                                }
+                            }
+                        }
+                        .vip-txt{
+                            display: block;
+                            margin-top: 10px;
+                            color: #999;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .u-safety{
+                    float: left;
+                    margin-left: 20px;
+                    line-height: 30px;
+                    color: #666;
+                    .safe-top{
+                        b{
+                            color: #e8380d;
+                            font-weight: normal;
+                        }
+                        a{
+                            margin-left: 10px;
+                            color: #008842;
+                            text-decoration: underline;
+                        }
+                    }
+                    .tel-email{
+                        i{
+                            width: 16px;
+                            height: 15px;
+                            vertical-align: middle;
+                            background: url('http://localhost:9000/css/img/user-info.png');
+                        }
+                        .it{
+                            background-position: -24px 0;
+                        }
+                        a{
+                            color: #008842;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .user-right{
+                float: left;
+                height: 120px;
+                width: 477px;
+                border: 1px solid #e3e6e0;
+                border-right: none;
+                border-left: none;
+                background: #fff;
+                .user-bac-2{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 122px;
+                    width: 4px;
+                    background: url('http://localhost:9000/css/img/right.png')
+                }
+                ul{
+                    margin-top: 22px;
+                    li{
+                        float: left;
+                        width: 25%;
+                        text-align: center;
+                        h4{
+                            height: 15px;
+                            color: #5d5d5d;
+                            font-weight: normal;
+                            i{
+                                background: url('http://localhost:9000/css/img/user-info.png');
+                                width: 16px;
+                                height: 15px;
+                                vertical-align: middle;
+                                background-position: -48px 0 ;
+                            }
+                            .iz1{
+                                background-position: -71px 0;
+                            }
+                            .iz2{
+                                background-position: -95px 0;
+                            }
+                            .iz3{
+                                background-position: -117px 0;
+                            }
+                        }   
+                        .num{
+                            margin: 10px 0;
+                            color: #e8380d;
+                            b{
+                                font-size: 20px;
+                                font-weight: normal;
+                            }
+                        } 
+                        a{
+                            display: inline-block;
+                            padding: 2px 7px;
+                            color: #5d5d5d;
+                            border: 1px solid #c5c5c5;
+                            background: #fafafa;
+                        }
+                    }
+                }
+            }
+        }
+        .my-order{
+            margin-bottom: 20px;
+            border: 1px solid #e3e6e0;
+            background: #fff;
+            .title{
+                position: relative;
+                padding: 10px 20px;
+                border-bottom: 1px dashed #e7e7e7;
+                background: #eff7f1;
+                h3{
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                a{
+                    color: #008842;
+                    position: absolute;
+                    top: 10px;
+                    right: 20px;
+                    text-decoration: underline;
+                }
+            }   
+            .title-boto{
+                height: 70px;
+                line-height: 70px;
+                font-size: 14px;
+                text-align: center;
+                a{
+                    color: #008842;
+                    text-decoration: underline; 
+                }
+            } 
+        }
+    }
+}
+/* 最底部 */
+.footer{
+    zoom: 1;
+    clear: both;
+    position: relative;
+    padding-bottom: 20px;
+    border-top: 1px solid #e0e0e0;
+    .footerin{
+        width: $allWidth;
+        margin: 50px auto 0;
+        dl{
+            width: 190px;
+            float: left;
+            margin-left: 50px;
+            display: inline;
+            dt{
+                height: 23px;
+                line-height: 23px;
+                background: url('http://localhost:9000/css/img/footer_icon.png') no-repeat;
+                font-size: 14px;
+                text-indent: 40px
+            }
+            .d1{
+                background-position: 0 0;
+            }
+            .d2{
+                background-position: 0 -23px;
+            }
+            .d3{
+                background-position: 0 -46px;
+            }
+            .d4{
+                background-position: 0 -69px;
+            }
+            .d5{
+                background-position: 0 -92px;
+            }
+            dd{
+                border-left: 1px dashed #A8A8A8;
+                padding-left: 20px;
+                height: 110px;
+                min-height: 110px;
+                margin: 15px 0 0 13px;
+                a{
+                    &:hover{
+                        color: $greenColor;
+                        text-decoration: underline;
+                    }
+                    color: #575556;
+                    line-height: 22px;
+                }
+            }
+        }
+        .service{
+            clear: both;
+            text-align: center;
+            padding: 60px 0 20px;
+            color: #008842;
+            font-size: 14px;
+            span{
+                display: inline-block;
+                padding: 0 10px;
+            }
+        }
+        .copyright{
+            clear: both;
+            color: #717171;
+            text-align: center;
+            line-height: 22px;
+            .copyimg{
+                a{
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 10px;
+                    zoom: 1;
+                    vertical-align: middle;
+                    .i2{
+                        height: 47px;
+                    }
+                    .i3{
+                        width: 47px;
+                        height: 47px;
+                    }
+                    .i4{
+                        float: left;
+                    }
+                    span{
+                        float: left;
+                        height: 20px;
+                        line-height: 20px;
+                        margin: 0px 0px 0px 5px;
+                        color: #939393;
+                    }
+                }
+            }
+        }
+    }
+}

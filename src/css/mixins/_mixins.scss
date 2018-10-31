@@ -1,0 +1,51 @@
+@mixin opacity($val){
+    opacity: $val/100;
+    filter: alpha(opacity=$val);
+}
+@mixin clearfix {
+    &::after{
+        content: '';
+        display: block;
+        height: 0;
+        font-size: 0;
+        width: 0;
+        clear: both;
+        overflow: hidden;
+    }
+}
+@mixin marginCenter{
+    margin: 0 auto;
+}
+
+@mixin triangle($dir,$color,$width){
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-width: $widthl;
+    @if($dir==top){
+        border-color: $color transparent transparent;
+    }
+    @if($dir==right){
+        border-color: transparent $color transparent transparent;
+    }
+    @if($dir==bottom){
+        border-color: transparent transparent $color transparent;
+    }
+    @if($dir==left){
+        border-color: transparent transparent transparent $color;
+    }
+}
+@mixin transform($val){
+    transform: rotate($val);
+    -ms-transform: rotate($val);
+    -moz-transform: rotate($val);               /* Firefox 4 */
+    -webkit-transform: rotate($val);        /* Safari 和 Chrome */
+    -o-transform: rotate($val);                /* Opera */
+}
+@mixin transition($a){
+    transition: $a;
+    -ms-transition: -webkit-transform $a;
+    -moz-transition: -webkit-transform $a;              /* Firefox 4 */
+    -webkit-transition: -webkit-transform $a;        /* Safari 和 Chrome */
+    -o-transition: -webkit-transform $a;               /* Opera */
+}

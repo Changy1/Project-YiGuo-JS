@@ -1,0 +1,290 @@
+@import '../../functions/functions';
+@import '../../mixins/mixins';
+$allWidth : 1200px;
+$smallFont : 12px;
+$white: white;
+$greenColor: rgb(0,136,66);
+$topColor : rgb(247,249,248);
+$fontColor: #727272;
+$colorE0 : #e0e0e0;
+$colorB4 : #b4c1a3;
+$color153: rgb(153,153,153);
+$imgheader : 'img/header-img.png';
+$fontfamily: Arial,Verdana,"\5b8b\4f53";
+body{
+    font-family: $fontfamily;
+    color: $fontColor;
+    word-break: break-all;
+    word-wrap: break-word;
+    font-size: $smallFont;
+}
+a,i{
+    display: inline-block;
+    cursor: pointer;
+}
+a{
+    &:hover{
+        color: $greenColor;
+    }
+}
+/* 登录头部 */
+.top{
+    background: $colorE0;
+    .container{
+        width: $allWidth;
+        @include marginCenter;
+        height: 50px;
+        padding: 15px 0 5px 0;
+        div{
+            position: relative;
+            float: left;
+            a{
+                display: block;
+                width: 145px;
+                height: 50px;
+                background: url('http://localhost:9000/css/img/logo.png') no-repeat;
+            }
+            .top-span{
+                color: #008842;
+                left: 240px;
+                font: 28px/1 Microsoft YaHei;
+                position: absolute;
+                top: 6px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+/* 登录中间部分输入框等 */
+.login{
+    background-color: #fff;
+    padding-top: 30px;
+    .wrap{
+        width: $allWidth;
+        @include marginCenter;
+        @include clearfix;
+        .wrap-left{
+            float: left;
+            img{
+                width: 666px;
+                height: 418px;
+                margin-top: 20px;
+            }
+        }
+        .wrap-right{
+            float: right;
+            padding-right: 105px;
+            .login-main{
+                margin-top: 20px;
+                width: 308px;
+                padding: 30px 20px 20px;
+                background-color: #fff;
+                border: 1px solid #e3e6e0;
+                p{
+                    margin-bottom: 20px;
+                    font: 12px Arial, "SimSun";
+                    color: #878787;
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+                    .yzm{
+                        position: relative;
+                        float: left;
+                        height:38px;
+                        width: 80px;
+                        border: 1px solid #c1c1c1;
+                        border-left: none;
+                        text-align: center;
+                        line-height: 38px;
+                        font-size: 25px;
+                    }
+                    strong{
+                        color: #262626;
+                        font: 18px/1 "Microsoft YaHei";
+                    }
+                    span{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        a{
+                            text-decoration: underline;
+                            color: $greenColor;
+                        }
+                    }
+                    .p2-span{
+                        background-position: 0 -120px;
+                    }
+                    .p3-span{
+                        background-position: 0 -180px;
+                    }
+                    .span{
+                        left: 1px;
+                        top: 1px !important;
+                        width: 40px;
+                        height: 38px;
+                        background-image: url('http://localhost:9000/css/img/bg_input.png');
+                        background-repeat: no-repeat; 
+                    }
+                    input{
+                        float: left;
+                        padding-left: 50px;
+                        width: 254px;
+                        border: 1px solid #c1c1c1;
+                        height: 38px;
+                        font: 14px/38px "Microsoft YaHei";
+                        background-color: rgb(250, 255, 189);
+                        color: rgb(0, 0, 0);
+                    }
+                    .input3{
+                        background-color: #fff;
+                        width: 100px;
+                    }
+                    .gray{
+                        float: left;
+                        margin-top: 13px;
+                        color: #878787;
+                    }
+                    .check{
+                        margin-right: 9px;
+                        height: 14px;
+                        width: 14px;
+                        vertical-align: -1px;
+                    }
+                    .check-span{
+                        float: right;
+                        a{
+                            color: #878787;
+                            text-decoration: none;
+                        }
+                    }
+                    .loginBig{
+                        background: #008842;
+                        display: inline-block;
+                        height: 50px;
+                        width: 306px;
+                        text-align: center;
+                        color: #fff;
+                        font: 18px/50px "Microsoft YaHei";
+                    }
+                }
+                .login-bottom{
+                    i{
+                        display: inline-block;
+                        width: 88px;
+                        height: 20px;
+                        margin-right: 20px;
+                        background-image: url('http://localhost:9000/css/img/qq.png');
+                    }
+                    .i1{
+                        background-position: -54px -189px;
+                    }
+                    .i2{
+                        background-position: -168px -189px;
+                    }
+                    .i3{
+                        background-position: -278px -189px;
+                        width: 57px;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+/* 最底部 */
+.footer{
+    background: rgb(247,248,248);
+    zoom: 1;
+    clear: both;
+    position: relative;
+    padding-bottom: 20px;
+    border-top: 1px solid rgb(224,224,224);
+    margin-top: 25px;
+    .footerin{
+        width: $allWidth;
+        margin: 85px auto 0;
+        dl{
+            width: 190px;
+            float: left;
+            margin-left: 50px;
+            display: inline;
+            dt{
+                height: 23px;
+                line-height: 23px;
+                background: url('http://localhost:9000/css/img/footer_icon.png') no-repeat;
+                font-size: 14px;
+                text-indent: 40px
+            }
+            .d1{
+                background-position: 0 0;
+            }
+            .d2{
+                background-position: 0 -23px;
+            }
+            .d3{
+                background-position: 0 -46px;
+            }
+            .d4{
+                background-position: 0 -69px;
+            }
+            .d5{
+                background-position: 0 -92px;
+            }
+            dd{
+                border-left: 1px dashed #A8A8A8;
+                padding-left: 20px;
+                height: 110px;
+                min-height: 110px;
+                margin: 15px 0 0 13px;
+                a{
+                    &:hover{
+                        color: $greenColor;
+                        text-decoration: underline;
+                    }
+                    color: #575556;
+                    line-height: 22px;
+                }
+            }
+        }
+        .service{
+            clear: both;
+            text-align: center;
+            padding: 60px 0 20px;
+            color: #008842;
+            font-size: 14px;
+            span{
+                display: inline-block;
+                padding: 0 10px;
+            }
+        }
+        .copyright{
+            clear: both;
+            color: #717171;
+            text-align: center;
+            line-height: 22px;
+            .copyimg{
+                a{
+                    display: inline-block;
+                    position: relative;
+                    height: 45px;
+                    margin: 0 10px;
+                    zoom: 1;
+                    .i2{
+                        height: 47px;
+                    }
+                    .i3{
+                        height: 47px;
+                    }
+                    span{
+                        font-size: 12px;
+                        color: #001b75;
+                        top: 25px;
+                        left: 50px;
+                        position: absolute;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

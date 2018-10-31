@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>易果网</title>
+    <link rel='stylesheet' type='text/css' href='../../css/common.css'>
+    <link rel='stylesheet' type='text/css' href='../../css/pages/shoppingcar/shoppingcar.css'>
+    <script data-main='shoppingcar.js' src='../../js/lib/require.js'></script>
+</head>
+<body>
+    <!-- 城市字符串模板插入位置 -->
+    <div id='citytext'></div>
+    <!-- 输入框字符串模板插入位置 -->
+    <div id='inputbottom'></div> 
+    <!-- 左边栏字符串模板插入位置 -->
+    <div id='lefttext'></div>  
+    <!-- 评价字符串模板插入位置 -->
+    <div id='comment'></div>
+    <!-- 当季热卖字符串模板插入位置 -->
+    <div id='hotbuy'></div>
+    <!-- 猜你喜欢字符串模板插入位置 -->
+    <div id='likeyou'></div>
+    <!-- 公用头部插入位置 -->
+    <div class='myhead'></div>
+    <!-- 公用左边栏菜单插入位置 -->
+    <div class='myleft'></div>
+    <!-- 中间部分 -->
+    <div class='wrap'>
+        <!-- 面包屑 -->
+        <div class='crunmbs'>
+            <a>首页</a>
+            &nbsp;&nbsp;>&nbsp;&nbsp;
+            <a>国产水果</a>
+            &nbsp;&nbsp;>&nbsp;&nbsp;
+            <a>百香果</a>
+            &nbsp;&nbsp;>&nbsp;&nbsp;&nbsp;百香果500g
+        </div>
+        <!-- 商品价钱等介绍 -->
+        <div id='offset' class='wrap-center'>
+            <div class='picture'>
+                <div class='picture-big'>
+                    <img id='bclone' style='display: block;' class='bigimg' src='http://localhost:9000/css/img/baixiangguo1.jpg'> 
+                    <img style='display: none;' class='bigimg' src='http://localhost:9000/css/img/baixiangguo2.jpg'>
+                    <img style='display: none;' class='bigimg' src='http://localhost:9000/css/img/baixiangguo3.jpg'>
+                </div>
+                <div class='picture-small'>
+                    <div class='picList'>
+                        <ul>
+                            <li class='small'>
+                                <img class='smallimg' src='http://localhost:9000/css/img/baixiangguo1.jpg'> 
+                            </li>
+                            <li class='small'>
+                                <img class='smallimg' src='http://localhost:9000/css/img/baixiangguo2.jpg'>
+                            </li>
+                            <li class='small'>
+                                <img class='smallimg' src='http://localhost:9000/css/img/baixiangguo3.jpg'>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='picture-new'>
+                    <img src='http://localhost:9000/css/img/xinpin.png'>
+                </div>
+            </div>
+            <div class='picture-right'>
+                <div class='details-top'>
+                    <h1 id='shoppname'>百香果500g</h1>
+                    <p>榨汁泡饮，风味无穷</p>
+                </div>
+                <div class='details-bottom'>
+                    <div class='details-price'>
+                        <div>
+                            <span class='jiage'>价格：</span>
+                            <span>
+                                <em>¥</em>
+                                <strong>15.90</strong>
+                            </span>
+                        </div>
+                        <div class='more'>
+                                更多商品优惠，尽在易果生鲜APP
+                            </div>
+                    </div>
+                    <div class='details-tel'>
+                        <p>
+                            <i></i>
+                            手机下单购买
+                            <strong>立即扫码</strong>
+                        </p>
+                        <div class='code'>
+                            <img src='http://static01.yiguo.com/www/images/header/qrcode_app.jpg'>
+                        </div>
+                    </div>
+                    <div class='details-review'>
+                        <p>总体满意度</p>
+                        <p>
+                            <b>5.0</b>
+                            分
+                        </p>
+                        <p>
+                            <a>
+                                <span>(评论数6871)</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class='picture-bottom'>
+                <div class='left'>
+                    <div class='choose'>
+                        <div class='dt'>规格:</div>
+                        <div class='dd'>
+                            <div class='li guige'>
+                                <a class='choose-a'>
+                                    <span>￥<b class='span1'>29.80</b></span>
+                                    <span class='span2'>1kg/份</span>
+                                    <i></i>
+                                </a>
+                            </div>
+                            <div class='li guige'>
+                                <a class='choose-a'>
+                                    <span>￥<b class='span1'>298.0</b></span>
+                                    <span class='span2'>10kg/份</span>
+                                    <i></i>
+                                </a>
+                            </div>
+                            <a id='place' style='line-height: 55px; color: red;'>请选择规格！</a>
+                        </div>
+                    </div>
+                    <div class='go'>
+                        满百包邮，
+                        <b>24:00</b>
+                        前完成订单 预计明日
+                        <b>(9月18日)</b>
+                        送达
+                    </div>
+                    <div class='go'>
+                        <i>
+                            <img src='http://static01.yiguo.com/www/images/icon1.png'>
+                        </i>
+                        不支持7天无理由退货
+                    </div>
+                    <div class='nono'></div>
+                    <div class='amount'>
+                        <div class='dt'>数量:</div>
+                        <div class='dd'>
+                            <div class='dd-left'>
+                                <button class='bn-'>-</button>
+                                <input type='text' class='input-num' value='1'>
+                                <button class='bnadd'>+</button>
+                            </div>
+                            <div class='dd-right'>
+                                <a id='have'>
+                                    <i></i>暂时无货
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='right'>
+                    <table>
+                        <tr>
+                            <th>原产地：</th>
+                            <td>广西桂林</td>
+                        </tr>
+                        <tr>
+                            <th>商品编号：</th>
+                            <td>1275853</td>
+                        </tr>
+                        <tr>
+                            <th>品牌：</th>
+                            <td>易果</td>
+                        </tr>
+                        <tr>
+                            <th>发货地：</th>
+                            <td>广西桂林</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- 评论和图片 -->
+        <div class='comment'>
+            <div class='comment-left'>
+                <div class='cleft-top'>
+                    <div class='neartime'>
+                        最近浏览
+                        <a>清空</a>
+                    </div>
+                    <div class='nearbottom'>
+                        <div class='img'>
+                            <a>
+                                <img src='http://img10.yiguoimg.com/d/items/2018/180808/9288728022000904_300.jpg'>
+                            </a>
+                        </div>
+                        <div class='txt'>
+                            <a>
+                                百香果1kg
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class='cleft-bottom'>
+                    <div class='c-love'>猜你喜欢</div>
+                    <div class='lovelist'>
+                        <!-- 字符串模板插入位置 -->
+                        <img style='display: block; width: 60px;margin: 30px auto 30px;' src='http://localhost:9000/css/img/loading.gif'>
+                    </div>
+                </div>
+            </div>
+            <div class='comment-right'>
+                <div class='hot-sale'>
+                    <div class='hot-top'>
+                        当季热卖
+                    </div>
+                    <div class='hot-bottom'>
+                        <ul id='hotUl'>
+                    <!-- 字符串模板插入位置    --> 
+                    <img style='display: block; width: 60px;margin: 20px auto 30px;' src='http://localhost:9000/css/img/loading.gif'>
+                        </ul>
+                    </div>
+                </div>
+                <div class='product'>
+                    <!-- 头部 -->
+                    <div class='product-top'>
+                        <ul>
+                            <li>
+                                <a class='click-one'>商品详情</a>
+                            </li>
+                            <li class='active'>
+                                <a class='click-two'>用户评论<b>1998</b></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 内容 -->
+                    <div class='product-bottom'>
+                        <!-- 商品详情 -->
+                        <div id='none1' class='product-txt topp' style='display: none'>
+                            <div class='txt-guige'>
+                                <table>
+                                    <tr>
+                                        <th>单果价格</th>
+                                        <td>45g以上/个</td>
+                                    </tr>
+                                    <tr>
+                                        <th>商品状态</th>
+                                        <td>冷藏</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p>
+                                <img>
+                            </p>
+                        </div>
+                        <!-- 商品评价 -->
+                        <div id='none2' class='product-txt'>
+                            <div class='txt-top'>
+                                <div class='score'>
+                                    总体满意度
+                                    <b>
+                                        5.0<span>分</span>
+                                    </b>
+                                    (共有<strong>1985</strong>人评论)
+                                </div>
+                                <div class='percent'>
+                                    <ul>
+                                        <li>
+                                            <b>好评</b>
+                                            <span></span>
+                                            <i>69%</i>
+                                        </li>
+                                        <li>
+                                            <b>中评</b>
+                                            <span></span>
+                                            <i>69%</i>
+                                        </li>
+                                        <li>
+                                            <b>差评</b>
+                                            <span></span>
+                                            <i>69%</i>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class='comment-btn'>
+                                    
+                                    前5位评论用户可获得更高悠币奖励
+                                    
+                                    <a>我要评论</a>
+                                    <p>只有购买过该商品的用户才能评论</p>
+                                </div>
+                            </div>
+                            <div class='txt-bottom'>
+                                <div class='comment-top'>
+                                    <div class='comment-tab'>
+                                        <span class='on'>
+                                            全部评论（<a>290</a>）
+                                        </span>
+                                        <span>
+                                            好评（<a>290</a>）
+                                        </span>
+                                        <span>
+                                            中评（<a>290</a>）
+                                        </span>
+                                        <span>
+                                            差评（<a>290</a>）
+                                        </span>
+                                        <span>
+                                            有晒单（<a>290</a>）
+                                        </span>
+                                    </div>
+                                    <div class='extra'>
+                                        <span>
+                                            <select>
+                                                <option>按默认</option>
+                                                <option>按时间</option>
+                                            </select>
+                                        </span>
+                                        <span>
+                                            <input type='checkbox' checked='checked'>有内容
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class='comment-bottom'>
+                                    <!-- 字符串模板插入位置 -->
+                                    <img id='looood' style='display: block; width: 60px;margin: 20px auto 0;' src='http://localhost:9000/css/img/loading.gif'>
+                                </div>
+                                <div class='paging' style='display: none;'>
+                                    <a id='up'>上一页</a>
+                                    <a style='display: none;' class='this that'>1</a>
+                                    <a style='display: none;' class='that'>2</a>
+                                    <a style='display: none;' class='that'>3</a>
+                                    <a style='display: none;' class='that'>4</a>
+                                    <a style='display: none;' class='that'>5</a>
+                                    <a style='display: none;' class='that'>6</a>
+                                    <a style='display: none;' class='that'>7</a>
+                                    <a style='display: none;' class='that'>8</a>
+                                    <a style='display: none;' class='that'>9</a>
+                                    <a id='down'>下一页</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 侧边悬浮 -->
+    <div class='sidebar'>
+        <a class='sidebar-top'></a>
+        <a class='sidebar-bottom'></a>
+    </div>
+    <!-- 底部灰色条 -->
+    <div class='bottom-top'>
+        <div class='bottom-wrap'>
+            <ul>
+                <li class='s1'>
+                    <b>全球精选</b>
+                    <span>一站式生鲜购物方案</span>
+                </li>
+                <li class='s2'>
+                    <b>多仓直发</b>
+                    <span>特有次日达配送服务</span>
+                </li>
+                <li class='s3'>
+                    <b>源头直采</b>
+                    <span>精选正宗品质好食材</span>
+                </li>
+                <li class='s4'>
+                    <b>天天底价</b>
+                    <span>会员专属优惠购不得</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 最底部 -->
+    <div class='footer'>
+        <div class='footerin'>
+            <dl>
+                <dt class='d1'>新手指南</dt>
+                <dd>
+                    <p>
+                        <a>账户注册</a>
+                    </p>
+                    <p>
+                        <a>购物流程</a>
+                    </p>
+                    <p>
+                        <a>订购方式</a>
+                    </p>
+                    <p>
+                        <a>悠币说明</a>
+                    </p>
+                    <p>
+                        <a>会员等级</a>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt class='d2'>付款方式</dt>
+                <dd>
+                    <p>
+                        <a>支付方式</a>/<a>发票说明</a>
+                    </p>
+                    <p>
+                        <a>充值说明</a>/<a>储值卡说明</a>
+                    </p>
+                    <p>
+                        <a>优惠代码</a>/<a>礼品卡说明</a>
+                    </p>
+                    <p>
+                        <a>卡券购买章程</a>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt class='d3'>配送方式</dt>
+                <dd>
+                    <p>
+                        <a>配送运费</a>
+                    </p>
+                    <p>
+                        <a>配送范围</a>
+                    </p>
+                    <p>
+                        <a>配送时间</a>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt class='d4'>售后服务</dt>
+                <dd>
+                    <p>
+                        <a>退换货政策</a>
+                    </p>
+                    <p>
+                        <a>退换货流程</a>
+                    </p>
+                    <p>
+                        <a>常见问题</a>
+                    </p>
+                    <p>
+                        <a>极速退款</a>
+                    </p>
+                    <p>
+                        <a>投诉与建议</a>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt class='d5'>关于我们</dt>
+                <dd>
+                    <p>
+                        <a>公司介绍</a>
+                    </p>
+                    <p>
+                        <a>联系我们</a>
+                    </p>
+                    <p>
+                        <a>业务合作</a>
+                    </p>
+                    <p>
+                        <a>诚信举报</a>
+                    </p>
+                    <p>
+                        <a>人才招聘</a>
+                    </p>
+                    <p>
+                        <a>友情链接</a>
+                    </p>
+                </dd>
+            </dl>
+            <div class='service'>
+                <span>客服热线 400-000-7788 企业采购或团购，请转2号键咨询</span>
+                <span>周一至周日 9:00-21:00</span>
+            </div>
+            <div class='copyright'>
+                <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
+                <p>
+                    <a>沪ICP备09008015号 </a>  Copyright © 2005-2018 <a>上海易果电子商务有限公司</a>版权所有
+                </p>
+                <p class='copyimg'>
+                    <a><img src='http://localhost:9000/css/img/xiaofei.png'></a>
+                    <a><img class='i2' src='http://localhost:9000/css/img/wanggou.png'></a>
+                    <a><img class='i3' src='http://localhost:9000/css/img/gongshang.gif'></a>
+                    <a>
+                        <img class='i4' src='http://localhost:9000/css/img/jingcha.png'>
+                        <span>沪公网安备 31010502000002号</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

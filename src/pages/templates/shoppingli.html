@@ -1,0 +1,22 @@
+<!-- 当季热卖的字符串模板 -->
+<script type='text/html' id='shoppingli'>
+    <%for(var i=0; i< 10; i++){%>
+    <li>
+        <div class='li-img'>
+            <a href='http://localhost:9000/pages/shoppingcar/shoppingcar.html'>
+                <img src='<%=list[i].imgsrc%>'>
+            </a>
+        </div>
+        <div class='li-name'>
+            <a><%=list[i].cname%></a>
+        </div>
+        <div class='li-price'>
+            <strong>￥</strong><strong><%=list[i].price%></strong>
+            <del>
+                    ￥12.00
+
+                </del>
+        </div>
+    </li>
+    <%}%>
+</script>

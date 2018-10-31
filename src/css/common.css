@@ -1,0 +1,17 @@
+body,p,h1,h2,h3,h4,h5,h6,ul,dl,dd,td,input,fieldset,textarea,option,button{ margin:0; padding:0;}
+li{list-style:none;}
+a{text-decoration:none;}
+img,input{border:none; vertical-align:top; }
+a,input{outline:none;}
+h1,h2,h3,h4,h5,h6,b,strong{font-weight:100;}
+i,em{font-style:normal;}
+body{font:12px "微软雅黑";}
+.clearfix::after{content:""; display:block; clear:both; height:0;}
+.fl{float:left;}
+.fr{float:right;}
+.w-max{width:100%}
+.h-max{height: 100%;}
+.wh-max{width: 100%; height: 100%;}
+.p-abs {position: absolute;}
+.p-rel {position: relative;}
+.iconfont{color: white;}

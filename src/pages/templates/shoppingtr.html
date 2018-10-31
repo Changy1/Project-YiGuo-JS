@@ -1,0 +1,33 @@
+<!-- 购物车样式模板字符串 -->
+<script id='shoppingtr' type='text/html'>
+<tr>
+    <td class='c-check'>
+        <input class='one-check' type='checkbox' checked='true'>
+    </td>
+    <td class='c-img'>
+        <a>
+            <img src='<%=list.src%>'>
+        </a>
+    </td>
+    <td class='c-info'>
+        <a><%=list.name%></a>
+    </td>
+    <td class='c-ub'></td>
+    <td class='c-price'>￥<a><%=list.oneprice%></a></td>
+    <td class='c-num'>
+        <div>
+            <a class='btn-'></a>
+            <input type='text' value='<%=list.count%>'>
+            <a class='btnadd'></a>
+        </div>
+    </td>
+    <td class='c-total'>
+        ￥<span class='top-all'>39.90</span>
+    </td>
+    <td class='c-spec'><%=list.type%></td>
+    <td class='c-opera'>
+        <a>移入收藏</a><br>
+        <a class='remove'>删除</a>
+    </td>
+</tr>
+</script>

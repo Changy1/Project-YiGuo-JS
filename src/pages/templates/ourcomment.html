@@ -1,0 +1,38 @@
+<!-- 评论的字符串模板 -->
+<script id='ourcomment' type='text/html'>
+    <%for(var i =0; i< list.length ; i++){%>
+    <div class='comment-one'>
+        <div class='one-user'>
+            <img src='http://static01.yiguo.com/www/images/member/star1.jpg'>
+            <span class='name'><%=list[i].commentUser.userId%></span>
+            <span><%=list[i].comment.prodId%></span>
+        </div>
+        <div class='one-com'>
+            <div class='heading'>
+                <div class='stars'>
+                    <div class='stars-bg'>
+                        <span></span>
+                    </div>
+                    <div>
+                        <b>5</b>分
+                    </div>
+                </div>
+                <div class='stars-txt'>
+                    <span>商品质量：好</span>
+                    <span>商品质量：好</span>
+                    <span>商品质量：好</span>
+                </div>
+                <div class='date'>
+                    2018年09月17日
+                    <span>20:57:40</span>
+                </div>
+                <div class='comefrom'>
+                    来自
+                    <strong>易果App</strong>
+                </div>
+            </div>
+            <div class='reply'><%=list[i].comment.commentContent%></div>
+        </div>
+    </div>
+    <%}%>
+</script>

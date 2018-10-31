@@ -1,0 +1,16 @@
+<!-- 猜你喜欢模板字符串 -->
+<script type='text/html' id='youlike'>
+    <%for(var i=0;i< 8; i++){%>
+    <div class='listone'>
+        <div class='img'>
+            <a href='http://localhost:9000/pages/shoppingcar/shoppingcar.html'>
+                <img src='<%=list[i].imgsrc%>'>
+            </a>
+        </div>
+        <div class='txt'>
+            <strong><%=list[i].cname%></strong>
+            <span>¥</span><span><%=list[i].price%></span>
+        </div>
+    </div>
+    <%}%>
+</script>

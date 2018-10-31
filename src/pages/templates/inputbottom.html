@@ -1,0 +1,10 @@
+<!-- 输入框下热门信息 -->
+<script type='text/html' id='hotname'>
+    <%for(var i=0; i< list.length; i++){%>
+        <%if(list[i].IsImportant==true){%>
+        <a href='http://localhost:9000/pages/shoppingcar/shoppingcar.html' class='hot'><%=list[i].Text%></a>
+        <%}else{%>
+            <a href='http://localhost:9000/pages/shoppingcar/shoppingcar.html'><%=list[i].Text%></a> 
+        <%}%>
+    <%}%>
+</script>

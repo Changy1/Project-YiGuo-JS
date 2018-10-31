@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>易果网</title>
+    <link rel='stylesheet' type='text/css' href='../../css/common.css'>
+    <link rel='stylesheet' type='text/css' href='../../css/pages/list/list.css'>
+    <script data-main='list.js' src='../../js/lib/require.js'></script>
+</head>
+<body>
+    <!-- 城市字符串模板插入位置 -->
+    <div id='citytext'></div>
+    <!-- 输入框字符串模板插入位置 -->
+    <div id='inputbottom'></div> 
+    <!-- 左边栏字符串模板插入位置 -->
+    <div id='lefttext'></div>
+    <!-- 商品列表字符串模板插入位置 -->
+    <div id='listalll'></div>
+    <!--  公用头部插入位置 -->
+    <div class='myhead'></div>
+    <!-- 公用左边栏菜单插入位置 -->
+    <div class='myleft'></div>
+    <!-- 中间内容 -->
+    <div class='wrap-main'>
+        <!-- 广告位 -->
+        <div class='main-top'>
+            <a class='big'>
+                <img src='http://img07.yiguoimg.com/d/others/180629/9288725230331101.jpg'>
+            </a>
+            <a class='medium'>
+                <img src='http://img05.yiguoimg.com/e/others/160324/9288693076336760.jpg'>
+            </a>
+            <a class='medium'>
+                <img src='http://img05.yiguoimg.com/e/others/160303/9288692679975011.jpg'>
+            </a>
+            <a class='small'>
+                <img src='http://img07.yiguoimg.com/d/others/180629/9288725230363869.jpg'>
+            </a>
+            <a class='small' style='margin-right: 0;'>
+                <img src='http://img07.yiguoimg.com/e/others/161028/9288698048782684.jpg'>
+            </a>
+        </div>
+        <!-- 筛选 -->
+        <div class='select'>
+            <div class='tit'>
+                ►所有分类
+            </div>
+            <ul>
+                <li class='current'>
+                    <a>奇异果</a>
+                </li>
+                <li>
+                    <a>车厘子</a>
+                </li>
+                <li>
+                    <a>李</a>
+                </li>
+                <li>
+                    <a>莓</a>
+                </li>
+                <li>
+                    <a>牛油果</a>
+                </li>
+                <li>
+                    <a>提子</a>
+                </li>
+                <li>
+                    <a>苹果</a>
+                </li>
+                <li>
+                    <a>梨</a>
+                </li>
+                <li>
+                    <a>柑橘橙柚</a>
+                </li>
+                <li>
+                    <a>山竹</a>
+                </li>
+                <li>
+                    <a>香蕉</a>
+                </li>
+                <li>
+                    <a>火龙果</a>
+                </li>
+                <li>
+                    <a>椰子</a>
+                </li>
+                <li>
+                    <a>芒果</a>
+                </li>
+                <li>
+                    <a>凤梨</a>
+                </li>
+                <li>
+                    <a>榴莲</a>
+                </li>
+                <li>
+                    <a>热带水果</a>
+                </li>
+                <li>
+                    <a>时令水果</a>
+                </li>
+                <li class='last'>
+                    <a>原箱水果</a>
+                </li>
+            </ul>
+        </div>
+        <!-- 排序 -->
+        <div class='filter'>
+            <a class='up'>默认排序</a>
+            <a>
+                销量<i></i>
+            </a>
+            <a>
+                价格<i class='down'></i>
+            </a>
+            <a>
+                评论<i></i>
+            </a>
+        </div>
+        <!-- 商品列表 -->
+        <div class='good-list'>
+            <ul id='uL'>
+                <img id='looood' style='display: block; width: 60px;margin: 30px auto 0;' src='http://localhost:9000/css/img/loading.gif'>
+                <!-- 商品列表字符串模板插入位置 -->
+            </ul>
+            <ul id='uL2' style='display: none'>
+                <img id='looood' style='display: block; width: 60px;margin: 30px auto 0;' src='http://localhost:9000/css/img/loading.gif'>
+                <!-- 商品列表字符串模板插入位置 -->
+            </ul>
+        </div>
+    </div>
+    <!-- 底部灰色条 -->
+    <div class='bottom-top'>
+        <div class='bottom-wrap'>
+            <ul>
+                <li class='s1'>
+                    <b>全球精选</b>
+                    <span>一站式生鲜购物方案</span>
+                </li>
+                <li class='s2'>
+                    <b>多仓直发</b>
+                    <span>特有次日达配送服务</span>
+                </li>
+                <li class='s3'>
+                    <b>源头直采</b>
+                    <span>精选正宗品质好食材</span>
+                </li>
+                <li class='s4'>
+                    <b>天天底价</b>
+                    <span>会员专属优惠购不得</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 最底部 -->
+    <div class='footer'>
+        <div class='footerin'>
+            <dl>
+                <dt class='d1'>新手指南</dt>
+                <dd>
+                    <p>
+                        <a>账户注册</a>
+                    </p>
+                    <p>
+                        <a>购物流程</a>
+                    </p>
+                    <p>
+                        <a>订购方式</a>
+                    </p>
+                    <p>
+                        <a>悠币说明</a>
+                    </p>
+                    <p>
+                        <a>会员等级</a>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt class='d2'>付款方式</dt>
+                <dd>
+                    <p>
+                        <a>支付方式</a>/<a>发票说明</a>
+                    </p>
+                    <p>
+                        <a>充值说明</a>/<a>储值卡说明</a>
+                    </p>
+                    <p>
+                        <a>优惠代码</a>/<a>礼品卡说明</a>
+                    </p>
+                    <p>
+                        <a>卡券购买章程</a>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt class='d3'>配送方式</dt>
+                <dd>
+                    <p>
+                        <a>配送运费</a>
+                    </p>
+                    <p>
+                        <a>配送范围</a>
+                    </p>
+                    <p>
+                        <a>配送时间</a>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt class='d4'>售后服务</dt>
+                <dd>
+                    <p>
+                        <a>退换货政策</a>
+                    </p>
+                    <p>
+                        <a>退换货流程</a>
+                    </p>
+                    <p>
+                        <a>常见问题</a>
+                    </p>
+                    <p>
+                        <a>极速退款</a>
+                    </p>
+                    <p>
+                        <a>投诉与建议</a>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt class='d5'>关于我们</dt>
+                <dd>
+                    <p>
+                        <a>公司介绍</a>
+                    </p>
+                    <p>
+                        <a>联系我们</a>
+                    </p>
+                    <p>
+                        <a>业务合作</a>
+                    </p>
+                    <p>
+                        <a>诚信举报</a>
+                    </p>
+                    <p>
+                        <a>人才招聘</a>
+                    </p>
+                    <p>
+                        <a>友情链接</a>
+                    </p>
+                </dd>
+            </dl>
+            <div class='service'>
+                <span>客服热线 400-000-7788 企业采购或团购，请转2号键咨询</span>
+                <span>周一至周日 9:00-21:00</span>
+            </div>
+            <div class='copyright'>
+                <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
+                <p>
+                    <a>沪ICP备09008015号 </a>  Copyright © 2005-2018 <a>上海易果电子商务有限公司</a>版权所有
+                </p>
+                <p class='copyimg'>
+                    <a><img src='http://localhost:9000/css/img/xiaofei.png'></a>
+                    <a><img class='i2' src='http://localhost:9000/css/img/wanggou.png'></a>
+                    <a><img class='i3' src='http://localhost:9000/css/img/gongshang.gif'></a>
+                    <a>
+                        <img class='i4' src='http://localhost:9000/css/img/jingcha.png'>
+                        <span>沪公网安备 31010502000002号</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

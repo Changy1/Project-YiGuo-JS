@@ -1,0 +1,28 @@
+<!-- 左侧菜单信息图片，弹出框信息图片动态获取对应字符串模板 -->
+<script id='leftnavtext' type='text/html'>
+    <%for(var i=0; i< list.length; i++){%>
+        <% var num = i*(-40)-10%>
+    <div class='item'>
+        <h3>
+            <a style='color: #727272;' href='http://localhost:9000/pages/list/list.html'>
+                <i style='background-position:<%=num%>px -10px ;'></i><%=list[i].CategoryName%><s>></s>
+            </a>
+        </h3>
+        <div class='sub-item'>
+            <h4>
+                <a><%=list[i].CategoryName%></a>
+            </h4>
+            <div class='sub-list'>
+                <%for(var j=0; j< list[i].SubCategory0.length;j++){%>
+                    <a  href='http://localhost:9000/pages/shoppingcar/shoppingcar.html'><%=list[i].SubCategory0[j].CategoryName%></a>
+                <%}%>
+            </div>
+            <%if(i!=4){%>
+            <div class='sub-img'>
+                <img src='<%=list[i].CategoryImageAd[0].Image%>'>
+            </div>
+            <%}%>
+        </div>
+    </div>
+    <%}%>
+</script>

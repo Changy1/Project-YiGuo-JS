@@ -1,0 +1,24 @@
+<!-- 这是商品字符串模板 -->
+<script type='text/html' id='listall'>
+    <%for(var i=0; i< list.length; i++){%>
+    <li>
+        <div class='g-img'>
+            <a href='http://localhost:9000/pages/shoppingcar/shoppingcar.html'>
+                <img src='<%=list[i].imgsrc%>'>
+            </a>
+        </div>
+        <div class='g-info'>
+            <div class='info-name'>
+                <a><%=list[i].cname%></a>
+            </div>
+            <div class='info-price'>
+                <a>￥</a><strong><%=list[i].price%></strong>
+            </div>
+        </div>
+        <div class='g-buy'>
+            <span><%=list[i].ename%></span>
+            <a class='fly'>加入购物车</a>
+        </div>
+    </li>
+    <%}%>
+</script>

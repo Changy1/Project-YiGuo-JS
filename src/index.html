@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>
+        易果生鲜</title>
+    <link rel='stylesheet' type='text/css' href='css/common.css'>
+    <link rel='stylesheet' type='text/css' href='css/index.css'>
+    <script data-main='index.js' src='js/lib/require.js'></script>
+</head>
+<body>
+    <!-- 城市字符串模板插入位置 -->
+    <div id='citytext'></div>
+    <!-- 输入框字符串模板插入位置 -->
+    <div id='inputbottom'></div> 
+    <!-- 左边栏字符串模板插入位置 -->
+    <div id='lefttext'></div>
+    <!-- 商品字符串模板插入位置 -->
+    <div id='commdity-text'></div>
+    <div class='All'>
+    <!--  公用头部插入位置 -->
+    <div class='myhead'></div>
+        <!-- 左边栏菜单 -->
+        <div class='left-nav'>
+            <div class='left-nav-container'>
+                <div class='left-all'>
+                    <a>全部商品分类▼</a>
+                </div>
+        <!-- 左边栏菜单字符串模板插入位置 -->
+                <div class='left-other'>
+                </div>
+            </div>
+        </div>
+        <!-- 轮播广告 -->
+        <div class='slider'>
+            <ul class='slider-ul'>
+                <li class='slider-li' style='display: block;'>
+                    <div class='slider-li-1'></div>
+                </li>
+                <li class='slider-li'>
+                    <div class='slider-li-2'></div>
+                </li>
+                <li class='slider-li'>
+                    <div class='slider-li-3'></div>
+                </li>
+                <li class='slider-li'>
+                    <div class='slider-li-4'></div>
+                </li>
+            </ul>
+            <div class="slider-nav">
+                <ul id='slider-ul'>
+                    <li class="select hot"></li>
+                    <li class="select"></li>
+                    <li class="select"></li>
+                    <li class="select"></li>
+                </ul>
+            </div>
+            <div class='slider-btn'>
+                <a class='prev'></a>
+                <a class='next'></a>
+            </div>
+        </div>
+        <!-- 活动广告位 -->
+        <div class='wrap'>
+            <ul>
+                <li>
+                    <a  href='http://localhost:9000/pages/list/list.html'>
+                        <img src='css/img/aa.jpg'>
+                        <p>
+                            <b>新品专区</b>
+                            探访源头产地 臻选当令时鲜
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a  href='http://localhost:9000/pages/list/list.html'>
+                        <img src='css/img/bb.jpg'>
+                        <p>
+                            <b>优质生活</b>
+                            美食有态度，生活更有味
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a  href='http://localhost:9000/pages/list/list.html'>
+                        <img src='css/img/cc.jpg'>
+                        <p>
+                            <b>水果专区</b>
+                            全球水果新鲜速递
+                        </p>
+                    </a>
+                </li>
+                <li>
+                    <a  href='http://localhost:9000/pages/list/list.html'>
+                        <img src='css/img/dd.jpg'>
+                        <p>
+                            <b>菜谱专栏</b>
+                            大厨私房菜 餐桌新食尚
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 商品楼层 -->
+        <div>
+        <div class='floor-wrap'>
+            <div class='floor-title'>
+                <h2>
+                    <a href='http://localhost:9000/pages/list/list.html' class='a1'>
+                        <i>F1</i>进口水果
+                    </a>
+                </h2>
+                <span class='keyword'>
+                    <a class='aftera'>进口苹果</a>
+                    <a class='aftera'>佳沛专区</a>
+                    <a>泰国鲜果</a>
+                </span>
+            </div>
+            <!-- 字符串模板插入处 -->
+            <div class='floor-con'>
+                <div class='floor-loding'></div>
+            </div>
+        </div>
+        <div class='floor-wrap'>
+            <div class='floor-title'>
+                <h2>
+                    <a href='http://localhost:9000/pages/list/list.html' class='a2'>
+                        <i style='background-position: -46px 0;'>F2</i>国产水果
+                    </a>
+                </h2>
+                <span class='keyword'>
+                    <a class='aftera'>果味四川</a>
+                    <a class='aftera'>秋日梨享</a>
+                    <a>甜蜜柚惑</a>
+                </span>
+            </div>
+            <!-- 字符串模板插入处 -->
+            <div class='floor-con'>
+                <div class='floor-loding'></div>
+            </div>
+        </div>
+        <div class='floor-wrap'>
+            <div class='floor-title'>
+                <h2>
+                    <a href='http://localhost:9000/pages/list/list.html' class='a3'>
+                        <i style='background-position: -184px 0;'>F3</i>海鲜水产
+                    </a>
+                </h2>
+                <span class='keyword'>
+                    <a class='aftera'>刺身专区</a>
+                    <a class='aftera'>东海水产</a>
+                    <a>海产干货</a>
+                </span>
+            </div>
+            <div class='floor-con'>
+                <div class='floor-loding'></div>
+            </div>
+        </div>
+        <div class='floor-wrap'>
+            <div class='floor-title'>
+                <h2>
+                    <a href='http://localhost:9000/pages/list/list.html' class='a4'>
+                        <i style='background-position: -92px 0;'>F4</i>精选肉类
+                    </a>
+                </h2>
+                <span class='keyword'>
+                    <a class='aftera'>欧洲天然猪</a>
+                    <a class='aftera'>澳洲牛肉</a>
+                    <a>肉类制品</a>
+                </span>
+            </div>
+            <div class='floor-con'>
+                <div class='floor-loding'></div>
+            </div>
+        </div>
+        <div class='floor-wrap'>
+            <div class='floor-title'>
+                <h2>
+                    <a href='http://localhost:9000/pages/list/list.html' class='a5'>
+                        <i style='background-position: -138px 0;'>F5</i>禽类蛋品
+                    </a>
+                </h2>
+                <span class='keyword'>
+                    <a class='aftera'>原味蒸品</a>
+                    <a class='aftera'>原汁煲汤</a>
+                    <a>禽类分割品</a>
+                </span>
+            </div>
+            <div class='floor-con'>
+                <div class='floor-loding'></div>
+            </div>
+        </div>
+        <div class='floor-wrap'>
+            <div class='floor-title'>
+                <h2>
+                    <a href='http://localhost:9000/pages/list/list.html' class='a6'>
+                        <i style='background-position: -368px 0;'>F6</i>油粮杂货
+                    </a>
+                </h2>
+                <span class='keyword'>
+                    <a class='aftera'>进口食用油</a>
+                    <a class='aftera'>人气零嘴</a>
+                    <a>进口酱料</a>
+                </span>
+            </div>
+            <div class='floor-con'>
+                <div class='floor-loding'></div>
+            </div>
+        </div>
+        <div class='floor-wrap'>
+            <div class='floor-title'>
+                <h2>
+                    <a href='http://localhost:9000/pages/list/list.html' class='a7'>
+                        <i style='background-position: -230px 0;'>F7</i>乳品蛋糕
+                    </a>
+                </h2>
+                <span class='keyword'>
+                    <a class='aftera'>味金</a>
+                    <a class='aftera'>蛋糕</a>
+                    <a>卓德乳品</a>
+                </span>
+            </div>
+            <div class='floor-con'>
+                <div class='floor-loding'></div>
+            </div>
+        </div>
+        <div class='floor-wrap'>
+            <div class='floor-title'>
+                <h2>
+                    <a href='http://localhost:9000/pages/list/list.html' class='a8'>
+                        <i style='background-position: -414px 0;'>F8</i>饮料酒水
+                    </a>
+                </h2>
+                <span class='keyword'>
+                    <a class='aftera'>饮用水</a>
+                    <a class='aftera'>纯正麦片</a>
+                    <a>贝纳颂</a>
+                </span>
+            </div>
+            <div class='floor-con'>
+                <div class='floor-loding'></div>
+            </div>
+        </div>
+        <div class='floor-wrap'>
+            <div class='floor-title'>
+                <h2>
+                    <a href='http://localhost:9000/pages/list/list.html' class='a9'>
+                        <i style='background-position: -531px 0;'>F9</i>方便速食
+                    </a>
+                </h2>
+                <span class='keyword'>
+                    <a class='aftera'>大娘水饺</a>
+                    <a class='aftera'>湾仔码头</a>
+                    <a>龙凤</a>
+                </span>
+            </div>
+            <div class='floor-con'>
+                <div class='floor-loding'></div>
+            </div>
+        </div>
+        </div>
+        <!-- 底部灰色条 -->
+        <div class='bottom-top'>
+            <div class='bottom-wrap'>
+                <ul>
+                    <li class='s1'>
+                        <b>全球精选</b>
+                        <span>一站式生鲜购物方案</span>
+                    </li>
+                    <li class='s2'>
+                        <b>多仓直发</b>
+                        <span>特有次日达配送服务</span>
+                    </li>
+                    <li class='s3'>
+                        <b>源头直采</b>
+                        <span>精选正宗品质好食材</span>
+                    </li>
+                    <li class='s4'>
+                        <b>天天底价</b>
+                        <span>会员专属优惠购不得</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 最底部 -->
+        <div class='footer'>
+            <div class='footerin'>
+                <dl>
+                    <dt class='d1'>新手指南</dt>
+                    <dd>
+                        <p>
+                            <a>账户注册</a>
+                        </p>
+                        <p>
+                            <a>购物流程</a>
+                        </p>
+                        <p>
+                            <a>订购方式</a>
+                        </p>
+                        <p>
+                            <a>悠币说明</a>
+                        </p>
+                        <p>
+                            <a>会员等级</a>
+                        </p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class='d2'>付款方式</dt>
+                    <dd>
+                        <p>
+                            <a>支付方式</a>/<a>发票说明</a>
+                        </p>
+                        <p>
+                            <a>充值说明</a>/<a>储值卡说明</a>
+                        </p>
+                        <p>
+                            <a>优惠代码</a>/<a>礼品卡说明</a>
+                        </p>
+                        <p>
+                            <a>卡券购买章程</a>
+                        </p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class='d3'>配送方式</dt>
+                    <dd>
+                        <p>
+                            <a>配送运费</a>
+                        </p>
+                        <p>
+                            <a>配送范围</a>
+                        </p>
+                        <p>
+                            <a>配送时间</a>
+                        </p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class='d4'>售后服务</dt>
+                    <dd>
+                        <p>
+                            <a>退换货政策</a>
+                        </p>
+                        <p>
+                            <a>退换货流程</a>
+                        </p>
+                        <p>
+                            <a>常见问题</a>
+                        </p>
+                        <p>
+                            <a>极速退款</a>
+                        </p>
+                        <p>
+                            <a>投诉与建议</a>
+                        </p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class='d5'>关于我们</dt>
+                    <dd>
+                        <p>
+                            <a>公司介绍</a>
+                        </p>
+                        <p>
+                            <a>联系我们</a>
+                        </p>
+                        <p>
+                            <a>业务合作</a>
+                        </p>
+                        <p>
+                            <a>诚信举报</a>
+                        </p>
+                        <p>
+                            <a>人才招聘</a>
+                        </p>
+                        <p>
+                            <a>友情链接</a>
+                        </p>
+                    </dd>
+                </dl>
+                <div class='service'>
+                    <span>客服热线 400-000-7788 企业采购或团购，请转2号键咨询</span>
+                    <span>周一至周日 9:00-21:00</span>
+                </div>
+                <div class='copyright'>
+                    <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
+                    <p>
+                        <a>沪ICP备09008015号 </a>  Copyright © 2005-2018 <a>上海易果电子商务有限公司</a>版权所有
+                    </p>
+                    <p class='copyimg'>
+                        <a><img src='css/img/xiaofei.png'></a>
+                        <a><img class='i2' src='css/img/wanggou.png'></a>
+                        <a><img class='i3' src='css/img/gongshang.gif'></a>
+                        <a>
+                            <img class='i4' src='css/img/jingcha.png'>
+                            <span>沪公网安备 31010502000002号</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- 楼层引导 -->
+        <div class='guide' style='display: none'>
+            <div class='guide-nav'>
+                <a class='guide-a'>
+                    <b class='guide-b'></b>
+                    <em class='guide-em' style='display: block;'>进口水果</em>
+                    <i>&nbsp;</i>
+                </a>
+                <a class='guide-a'>
+                    <b class='guide-b' style='background-position: -40px 0'></b>
+                    <em class='guide-em'>国产水果</em>
+                    <i>&nbsp;</i>
+                </a>
+                <a class='guide-a'>
+                    <b class='guide-b' style='background-position: -80px 0'></b>
+                    <em class='guide-em'>海鲜水产</em>
+                    <i>&nbsp;</i>
+                </a>
+                <a class='guide-a'>
+                    <b class='guide-b'  style='background-position: -120px 0'></b>
+                    <em class='guide-em'>精选肉类</em>
+                    <i>&nbsp;</i>
+                </a>
+                <a class='guide-a'>
+                    <b class='guide-b'  style='background-position: -160px 0'></b>
+                    <em class='guide-em'>禽类蛋类</em>
+                    <i>&nbsp;</i>
+                </a>
+                <a class='guide-a'>
+                    <b class='guide-b'  style='background-position: -200px 0'></b>
+                    <em class='guide-em'>粮油杂货</em>
+                    <i>&nbsp;</i>
+                </a>
+                <a class='guide-a'>
+                    <b class='guide-b'  style='background-position: -240px 0'></b>
+                    <em class='guide-em'>乳品糕点</em>
+                    <i>&nbsp;</i>
+                </a>
+                <a class='guide-a'>
+                    <b class='guide-b' style='background-position: -280px 0'></b>
+                    <em class='guide-em'>饮料酒水</em>
+                    <i>&nbsp;</i>
+                </a>
+                <a class='guide-a'>
+                    <b class='guide-b'  style='background-position: -320px 0'></b>
+                    <em class='guide-em'>方便速食</em>
+                    <i>&nbsp;</i>
+                </a>
+            </div>
+        </div>
+        <!-- 侧边悬浮 -->
+        <div class='sidebar'>
+            <a class='sidebar-top'></a>
+            <a class='sidebar-bottom'></a>
+        </div>
+    </div>
+</body>
+</html>

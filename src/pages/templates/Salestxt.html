@@ -1,0 +1,26 @@
+<!-- 购物车特惠换购栏字符串模板 -->
+<script type='text/html' id='salestxt'>
+    <%for(var i=0; i< list.length; i++){%>
+    <li>
+        <div class='li-left'>
+            <a  href='http://localhost:9000/pages/shoppingcar/shoppingcar.html'>
+                <img src='<%=list[i].imgsrc%>'>
+            </a>
+        </div>
+        <div class='li-right'>
+            <div class='li-name'>
+                <a><%=list[i].cname%></a>
+            </div>
+            <div class='li-price'>
+                <span>
+                    <strong><b>￥</b><%=list[i].price%></strong>/袋
+                </span>
+                <del>￥12.80</del>
+            </div>
+            <div class='li-hg'>
+                <a href='http://localhost:9000/pages/shoppingcar/shoppingcar.html'>换购</a>
+            </div>
+        </div>
+    </li>
+    <%}%>
+</script>

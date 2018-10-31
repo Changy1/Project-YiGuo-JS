@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>易果网</title>
+    <link rel='stylesheet' type='text/css' href='../../css/common.css'>
+    <link rel='stylesheet' type='text/css' href='../../css/pages/register/register.css'>
+    <script data-main='register.js' src='../../js/lib/require.js'></script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class='top'>
+        <div class='container'>
+            <div>
+                <a href="http://localhost:9000/"></a>
+                <span class='top-span'>注册</span>
+            </div>
+        </div>
+    </div>
+    <!-- 中间部分 -->
+    <form method="post">
+        <div class='register'>
+            <div class='wrap'>
+                <div class='wrap-left'>
+                    <p>
+                        <span class='input-name'>图形验证码</span>
+                        <input class='input-img kong' type='text' placeholder="图形验证码">
+                        <a class='yzm-text'>SBNB</a>
+                        <a id='next' class='next'>换一张</a>
+                    </p>
+                    <p>
+                        <span class='input-name'>手机号</span>
+                        <input id='input-iphone' class='input-long input-phone kong' type='text' placeholder="请输入您的手机号">
+                        <span style='display: none;' id='iphone-span' class='error'>
+                            <i></i>
+                            请输入正确的手机号
+                        </span>
+                    </p>
+                    <p>
+                        <span class='input-name'>手机验证码</span>
+                        <input id='input-yzm' class='input-long input-yzm kong' type='text' placeholder="手机验证码">
+                        <a class='yzm'>获取验证码</a>
+                        <span style='display: none;' id='yzm-span' class='error'>
+                            <i></i>
+                            请输入正确的验证码
+                        </span>
+                    </p>
+                    <p>
+                        <span class='input-name'>设置密码</span>
+                        <input id='input-password' class='input-long input-password kong' type='password' placeholder="字母开头，6-20位字母、符号或数字">
+                        <span style='display: none;' id='password-span' class='error'>
+                            <i></i>
+                            请输入正确的密码
+                        </span>
+                    </p>
+                    <p>
+                        <span class='input-name'>确认密码</span>
+                        <input id='passwordtwo' class='input-long input-password kong' type='password' placeholder="再次输入密码">
+                        <span style='display: none;' id='passwordtwo-span' class='error'>
+                            <i></i>
+                            两次密码不一致
+                        </span>
+                    </p>
+                    <p>
+                        <span class='input-name'>邀请码</span>
+                        <input class='input-long input-password' type='text' placeholder="邀请码">
+                    </p>
+                    <p style='margin-bottom: 10px;'>
+                        <span class='input-name'>&nbsp;</span>
+                        <input id='agreeyes' class='input-che' type='checkbox'>
+                        我已阅读并同意
+                        <a class='agree'>《易果服务协议》</a>
+                    </p>
+                    <p>
+                        <span class='input-name'>&nbsp;</span>
+                        <a id='go-success' class='success'>立即注册</a>
+                    </p>
+                </div>
+                <div class='wrap-right'>
+                    <div class='right-img'>
+                        <img src='http://localhost:9000/css/img/img.png'>
+                    </div>
+                </div>
+                <div class='fixdiv'>
+                    我已经注册，现在就
+                    <a href='http://localhost:9000/pages/login/login.html'>登录</a>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- 最底部 -->
+    <div class='footer'>
+            <div class='footerin'>
+                <dl>
+                    <dt class='d1'>新手指南</dt>
+                    <dd>
+                        <p>
+                            <a>账户注册</a>
+                        </p>
+                        <p>
+                            <a>购物流程</a>
+                        </p>
+                        <p>
+                            <a>订购方式</a>
+                        </p>
+                        <p>
+                            <a>悠币说明</a>
+                        </p>
+                        <p>
+                            <a>会员等级</a>
+                        </p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class='d2'>付款方式</dt>
+                    <dd>
+                        <p>
+                            <a>支付方式</a>/<a>发票说明</a>
+                        </p>
+                        <p>
+                            <a>充值说明</a>/<a>储值卡说明</a>
+                        </p>
+                        <p>
+                            <a>优惠代码</a>/<a>礼品卡说明</a>
+                        </p>
+                        <p>
+                            <a>卡券购买章程</a>
+                        </p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class='d3'>配送方式</dt>
+                    <dd>
+                        <p>
+                            <a>配送运费</a>
+                        </p>
+                        <p>
+                            <a>配送范围</a>
+                        </p>
+                        <p>
+                            <a>配送时间</a>
+                        </p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class='d4'>售后服务</dt>
+                    <dd>
+                        <p>
+                            <a>退换货政策</a>
+                        </p>
+                        <p>
+                            <a>退换货流程</a>
+                        </p>
+                        <p>
+                            <a>常见问题</a>
+                        </p>
+                        <p>
+                            <a>极速退款</a>
+                        </p>
+                        <p>
+                            <a>投诉与建议</a>
+                        </p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt class='d5'>关于我们</dt>
+                    <dd>
+                        <p>
+                            <a>公司介绍</a>
+                        </p>
+                        <p>
+                            <a>联系我们</a>
+                        </p>
+                        <p>
+                            <a>业务合作</a>
+                        </p>
+                        <p>
+                            <a>诚信举报</a>
+                        </p>
+                        <p>
+                            <a>人才招聘</a>
+                        </p>
+                        <p>
+                            <a>友情链接</a>
+                        </p>
+                    </dd>
+                </dl>
+                <div class='service'>
+                    <span>客服热线 400-000-7788</span>
+                    <span>周一至周日 9:00-21:00</span>
+                </div>
+                <div class='copyright'>
+                    <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
+                    <p>
+                        <a>沪ICP备09008015号 </a>  Copyright © 2005-2018 <a>上海易果电子商务有限公司</a>版权所有
+                    </p>
+                    <p class='copyimg'>
+                        <a><img src="http://img07.yiguoimg.com/d/web/171208/00652/173249/153685368061665897_121x29.png"></a>
+                        <a><img class='i2' src="http://img03.yiguo.com/images/footer_copy.gif"></a>
+                        <a><img class='i3' src="http://img02.yiguo.com/e/web/150623/00841/170532/picp_bg.png">
+                            <span>310100102001</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

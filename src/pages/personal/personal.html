@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>易果网</title>
+    <link rel='stylesheet' type='text/css' href='../../css/common.css'>
+    <link rel='stylesheet' type='text/css' href='../../css/pages/personal/personal.css'>
+    <script data-main='personal.js' src='../../js/lib/require.js'></script>
+</head>
+<body>
+    <!-- 城市字符串模板插入位置 -->
+    <div id='citytext'></div>
+    <!-- 输入框字符串模板插入位置 -->
+    <div id='inputbottom'></div> 
+    <!-- 左边栏字符串模板插入位置 -->
+    <div id='lefttext'></div>  
+    <!-- 公用头部插入位置 -->
+    <div class='myhead'></div>
+    <!-- 公用左边栏菜单插入位置 -->
+    <div class='myleft'></div>
+
+    <!-- 中间部分 -->
+    <div class='wrap'>
+        <!-- 面包屑 -->
+        <div class='crumbs'>
+            <a>首页</a>
+            >
+            <a>我的易果</a>
+        </div>
+        <!-- 左边部分 -->
+        <div class='wrap-left'>
+            <div class='le-con'>
+                <dl>
+                    <dt>交易信息</dt>
+                    <dd>
+                        <ul>
+                            <li><a>我的订单</a></li>
+                            <li><a>我的优惠券</a></li>
+                            <li><a>我的悠币</a></li>
+                            <li><a>我的礼品卡</a></li>
+                            <li><a>我的礼品兑换券</a></li>
+                            <li><a>购买过的商品</a></li>
+                            <li><a>我的收藏</a></li>
+                            <li><a>评论商品</a></li>
+                        </ul>
+                    </dd>
+                    <dt>账号信息</dt>
+                    <dd>
+                        <ul>
+                            <li><a>账户余额</a></li>
+                            <li><a>个人资料</a></li>
+                            <li><a>账号安全</a></li>
+                            <li><a>收货地址管理</a></li>
+                            <li><a>企业福利入口</a></li>
+                        </ul>
+                    </dd>
+                    <dt>售后服务</dt>
+                    <dd>
+                        <ul>
+                            <li><a>在线退换货</a></li>
+                            <li><a>投诉建议</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <!-- 右边部分 -->
+        <div class='wrap-right'>
+            <div class='user'>
+                <div class='user-left'>
+                    <div class='user-bac'></div>
+                    <div class='u-pic'>
+                    </div>
+                    <div class='u-txt'>
+                        <div class='txt-top'>
+                            <a class='txt-a1'>17853539589</a>
+                            <a class='txt-a2'>修改</a>
+                        </div>
+                        <div class='txt-bottom'>
+                            <div class='vip'>
+                                <div class='grade'>
+                                    <i class='i1'></i>
+                                    易果生鲜普通用户
+                                </div>
+                                <div class='grade-line'>
+                                    <span>
+                                        <i class='i2'></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <a class='vip-txt'>查看会员等级制度</a>
+                        </div>
+                    </div>
+                    <div class='u-safety'>
+                        <div class='safe-top'>
+                            账户安全等级：<b>中</b>
+                            <a>提升</a>
+                        </div>
+                        <div class='tel-email'>
+                            <i class='it'></i>
+                            手机：<a id='iph'>178****9589</a>
+                        </div>
+                        <div class='tel-email'>
+                            <i></i>
+                            邮箱：<a>未绑定</a>
+                        </div>
+                    </div>
+                </div>
+                <div class='user-right'>
+                    <div class='user-bac-2'></div>
+                    <ul>
+                        <li>
+                            <h4>
+                                <i class='iz'></i>
+                                账户余额
+                            </h4>
+                            <div class='num'>
+                                <b>¥0.00</b>
+                            </div>
+                            <div>
+                                <a>充值</a>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>
+                                <i class='iz1'></i>
+                                悠币
+                            </h4>
+                            <div class='num'>
+                                <b>120</b>
+                            </div>
+                            <div>
+                                <a>兑换</a>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>
+                                <i class='iz2'></i>
+                                优惠券
+                            </h4>
+                            <div class='num'>
+                                <b>4</b>
+                            </div>
+                            <div>
+                                <a>查看</a>
+                            </div>
+                        </li>
+                        <li>
+                            <h4>
+                                <i class='iz3'></i>
+                                礼品卡
+                            </h4>
+                            <div class='num'>
+                                <b>0</b>
+                            </div>
+                            <div>
+                                <a>绑定</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class='my-order'>
+                <div class='title'>
+                    <h3>我的订单</h3>
+                    <a>查看全部订单</a>
+                </div>
+                <div class='title-boto'>
+                    亲爱的用户，您目前尚无记录吆~
+                    <a>快去逛逛吧</a>
+                    ~
+                </div>
+            </div>
+            <div class='my-order'>
+                <div class='title'>
+                    <h3>我购买过的商品</h3>
+                    <a>查看全部商品</a>
+                </div>
+                <div class='title-boto'>
+                    亲爱的用户，您目前尚无记录吆~
+                    <a>快去逛逛吧</a>
+                    ~
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 最底部 -->
+    <div class='footer'>
+        <div class='footerin'>
+            <dl>
+                <dt class='d1'>新手指南</dt>
+                <dd>
+                    <p>
+                        <a>账户注册</a>
+                    </p>
+                    <p>
+                        <a>购物流程</a>
+                    </p>
+                    <p>
+                        <a>订购方式</a>
+                    </p>
+                    <p>
+                        <a>悠币说明</a>
+                    </p>
+                    <p>
+                        <a>会员等级</a>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt class='d2'>付款方式</dt>
+                <dd>
+                    <p>
+                        <a>支付方式</a>/<a>发票说明</a>
+                    </p>
+                    <p>
+                        <a>充值说明</a>/<a>储值卡说明</a>
+                    </p>
+                    <p>
+                        <a>优惠代码</a>/<a>礼品卡说明</a>
+                    </p>
+                    <p>
+                        <a>卡券购买章程</a>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt class='d3'>配送方式</dt>
+                <dd>
+                    <p>
+                        <a>配送运费</a>
+                    </p>
+                    <p>
+                        <a>配送范围</a>
+                    </p>
+                    <p>
+                        <a>配送时间</a>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt class='d4'>售后服务</dt>
+                <dd>
+                    <p>
+                        <a>退换货政策</a>
+                    </p>
+                    <p>
+                        <a>退换货流程</a>
+                    </p>
+                    <p>
+                        <a>常见问题</a>
+                    </p>
+                    <p>
+                        <a>极速退款</a>
+                    </p>
+                    <p>
+                        <a>投诉与建议</a>
+                    </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt class='d5'>关于我们</dt>
+                <dd>
+                    <p>
+                        <a>公司介绍</a>
+                    </p>
+                    <p>
+                        <a>联系我们</a>
+                    </p>
+                    <p>
+                        <a>业务合作</a>
+                    </p>
+                    <p>
+                        <a>诚信举报</a>
+                    </p>
+                    <p>
+                        <a>人才招聘</a>
+                    </p>
+                    <p>
+                        <a>友情链接</a>
+                    </p>
+                </dd>
+            </dl>
+            <div class='service'>
+                <span>客服热线 400-000-7788 企业采购或团购，请转2号键咨询</span>
+                <span>周一至周日 9:00-21:00</span>
+            </div>
+            <div class='copyright'>
+                <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
+                <p>
+                    <a>沪ICP备09008015号 </a>  Copyright © 2005-2018 <a>上海易果电子商务有限公司</a>版权所有
+                </p>
+                <p class='copyimg'>
+                    <a><img src='http://localhost:9000/css/img/xiaofei.png'></a>
+                    <a><img class='i2' src='http://localhost:9000/css/img/wanggou.png'></a>
+                    <a><img class='i3' src='http://localhost:9000/css/img/gongshang.gif'></a>
+                    <a>
+                        <img class='i4' src='http://localhost:9000/css/img/jingcha.png'>
+                        <span>沪公网安备 31010502000002号</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
